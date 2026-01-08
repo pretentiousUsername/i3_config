@@ -1,0 +1,2 @@
+01/08/2026 08:10:51 AM - ../src/commands.c:cmd_criteria_init:150 - Initializing criteria, current_match = 0x557eafe3d4c0
+01/08/2026 08:10:51 AM - ../src/handlers.c:handle_event:1433 - event type 28, xkb_base 85
