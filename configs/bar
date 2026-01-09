@@ -2,8 +2,6 @@
 # finds out, if available)
 bar {
     font pango:monospace 12
-    # font pango:monospace, FontAwesome 12
-    # font pango:monospace, FontAwesome 20
     status_command i3status-rs #~/.config/i3status/config.toml
     position top
     colors {
