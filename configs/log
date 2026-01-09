@@ -1,2 +1,2 @@
 # execute i3 with logging
-exec --shmlog-size=26214400 --no-startup-id dex --autostart --environment i3
+exec --no-startup-id dex --autostart --environment i3-with-shmlog --shmlog-size=26214400

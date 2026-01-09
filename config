@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-include ~/.config/i3/configs/gaps
+# include ~/.config/i3/configs/gaps
 
 set $mod Mod4
 
@@ -21,13 +21,15 @@ font pango:monospace 12
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
-exec --no-startup-id ~/.fehbg
 
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
-# exec --no-startup-id dex --autostart --environment i3
-include ~/.config/i3/configs/log
+exec --no-startup-id dex --autostart --environment i3
+# include ~/.config/i3/configs/log
+
+# Execute `feh` *after* booting up i3
+exec --no-startup-id ~/.fehbg
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -47,12 +49,12 @@ exec --no-startup-id dunst config ~/.config/dunst/dunstrc
 # Not here, hehe
 
 # Load colors
-include ~/.config/i3/configs/colors
-include ~/.config/i3/configs/window_decorations
+# include ~/.config/i3/configs/colors
+# include ~/.config/i3/configs/window_decorations
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-include ~/.config/i3/configs/volume_brightness
+# set $refresh_i3status killall -SIGUSR1 i3status  # this probably isn't necessary
+# include ~/.config/i3/configs/volume_brightness
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -76,7 +78,7 @@ bindsym $mod+Shift+q kill
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # bindsym $mod+F2 exec firefox
-include ~/.config/i3/configs/programs
+# include ~/.config/i3/configs/programs
 
 # change focus
 bindsym $mod+j focus left
@@ -200,7 +202,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-include ~/.config/i3/configs/bar
+# include ~/.config/i3/configs/bar
 
 # # Start i3bar to display a workspace bar (plus the system information i3status
 # # finds out, if available)
