@@ -1,4 +1,5 @@
 bindsym $mod+F2 exec firefox
 bindsym $mod+F3 exec alacritty -e ranger
+bindsym $mod+F5 exec alacritty -e neovim
 
 bindsym $mod+d exec rofi -show drun -show-icons
